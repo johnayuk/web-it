@@ -19,3 +19,6 @@ Route::get('/', function () {
 
 
 Route::get('admin','UserController@admin');
+Route::get('tables','UserController@tables');
+
+Route::post('send','EmailController@sendmail');

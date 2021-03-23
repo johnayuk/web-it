@@ -10,4 +10,12 @@ class UserController extends Controller
         
         return view('admin');
     }
+
+
+    public function tables(){
+        
+        return view('tables');
+    }
 }
+
+
