@@ -8,7 +8,7 @@ class UserController extends Controller
 {
     public function admin(){
         
-        return view('auth.login');
+        return view('admin');
     }
 
 
@@ -17,5 +17,3 @@ class UserController extends Controller
         return view('tables');
     }
 }
-
-

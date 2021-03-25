@@ -18,7 +18,16 @@ Route::get('/', function () {
 });
 
 
-Route::get('admin','UserController@admin');
-Route::get('tables','UserController@tables');
+Route::get('login','AuthController@login');
 
-Route::post('send','EmailController@sendmail');
+Route::post('userlogin','AuthController@loginUser');
+
+
+
+Route::group(['middleware' => ['admin']], function () {
+    Route::get('tables','UserController@tables');
+
+    Route::post('send','EmailController@sendmail');
+    
+    Route::get('admin','UserController@admin');
+});

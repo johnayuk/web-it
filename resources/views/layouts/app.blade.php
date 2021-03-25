@@ -100,7 +100,7 @@
       <div class="adminx-sidebar expand-hover push">
         <ul class="sidebar-nav">
           <li class="sidebar-nav-item">
-            <a href="/admin" class="sidebar-nav-link active">
+          <a href="{{url('admin')}}" class="sidebar-nav-link active">
               <span class="sidebar-nav-icon">
                 <i data-feather="home"></i>
               </span>
@@ -119,7 +119,7 @@
                 <i data-feather="layout"></i>
               </span>
               <span class="sidebar-nav-name">
-                Dashboard
+                Tables
               </span>
               <span class="sidebar-nav-end">
 
