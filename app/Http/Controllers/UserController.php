@@ -8,7 +8,7 @@ class UserController extends Controller
 {
     public function admin(){
         
-        return view('ad');
+        return view('auth.login');
     }
 
 

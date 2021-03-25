@@ -20,10 +20,12 @@
         <div class="card mb-0">
     
           <div class="card-body">
-            <form>
+            <form action="/login" method="POST">
+              @csrf
+              
               <div class="form-group">
                 <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email">
               </div>
               <div class="form-group">
                 <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
@@ -33,9 +35,7 @@
               <button type="submit" class="btn btn-sm btn-block btn-primary">Sign in</button>
             </form>
           </div>
-          <div class="card-footer text-center">
-            <a href="#"><small>Forgot your password?</small></a>
-          </div>
+         
         </div>
       </div>
     </div>
