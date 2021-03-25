@@ -24,9 +24,10 @@ Route::post('userlogin','AuthController@loginUser');
 
 
 
-
+Route::group(['middleware' => ['admin']], function () {
     Route::get('tables','UserController@tables');
 
     Route::post('send','EmailController@sendmail');
     
     Route::get('admin','UserController@admin');
+});
