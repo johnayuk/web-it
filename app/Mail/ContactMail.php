@@ -31,6 +31,6 @@ public $data;
      */
     public function build()
     {
-        return $this->from('john12ayuk@gmail.com')->markdown('emails.contacts.contact');
+        return $this->markdown('emails.contacts.contact');
     }
 }

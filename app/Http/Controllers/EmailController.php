@@ -19,7 +19,7 @@ public function sendmail(Request $request){
         'email' => 'required|email'
      ]);
         
- Mail::to('john12ayuk@gmail.com')->send(new ContactMail($data));
+ Mail::to('john1234ayuk@gmail.com')->send(new ContactMail($data));
 
 
  return redirect('/')->with('success', 'Thank you for contacting us');

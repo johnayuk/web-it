@@ -1082,7 +1082,7 @@
 
 
     <!-- Contact -->
-    <div id="contact" class="form-2">
+    {{-- <div id="contact" class="form-2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -1133,10 +1133,10 @@
                                 <span class="hexagon"></span>
                                 <i class="fab fa-behance fa-stack-1x"></i>
                             </a>
-                        </span>
+                        </span> --}}
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
-                <div class="col-lg-6">
+                {{-- <div class="col-lg-6">
                     
                     <!-- Contact Form -->
 
@@ -1149,7 +1149,7 @@
      
                          <strong>{{$message}}</strong>
                     </div> 
-                    @endif
+                    @endif --}}
 
                     {{-- <form action="/send" method="POST" id="contactForm" data-toggle="validator" data-focus="false">
                         @csrf
@@ -1178,9 +1178,9 @@
                         </div>
                     </form> --}}
 
-                    <form action="/send" method="POST">
+                    {{-- <form action="/send" method="POST">
                         @csrf
-                        {{-- @method('PUT') --}}
+                
   
                       <div class="form-group">
                           <label for="formGroupExampleInput">Example label</label>
@@ -1198,7 +1198,7 @@
                           <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
                       <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
+                    </form> --}}
                     <!-- end of contact form -->
 
                 </div> <!-- end of col -->

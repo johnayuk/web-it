@@ -22,16 +22,24 @@ Route::get('login','AuthController@login')->name('login');
 
 Route::post('userlogin','AuthController@loginUser');
 
+Route::post('send','EmailController@sendmail');
 
 
 Route::group(['middleware'=>['auth','admin']], function () {
 
     Route::get('tables','UserController@tables');
 
-    Route::post('send','EmailController@sendmail');
     
     Route::get('admin','UserController@admin');
 
     });
 
    
+    // MAIL_MAILER=smtp
+    // MAIL_HOST=smtp.mailtrap.io
+    // MAIL_PORT=2525
+    // MAIL_USERNAME=44b32a43edfa96
+    // MAIL_PASSWORD=37178dcfa8c0d3
+    // MAIL_ENCRYPTION=tls
+    // MAIL_FROM_ADDRESS=john12ayuk@gmail.com
+    // MAIL_FROM_NAME="${APP_NAME}"
