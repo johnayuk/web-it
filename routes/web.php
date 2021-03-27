@@ -24,6 +24,9 @@ Route::post('userlogin','AuthController@loginUser');
 
 Route::post('send','EmailController@sendmail');
 
+Route::post('contactUs','MessageController@createMessage');
+
+
 
 Route::group(['middleware'=>['auth','admin']], function () {
 

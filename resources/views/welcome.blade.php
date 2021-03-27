@@ -630,42 +630,89 @@
                 <div class="col-lg-6">
                    
                     <!-- Call Me Form -->
-                    <form id="callMeForm" data-toggle="validator" data-focus="false">
+                    {{-- <form action="/contactUs" method="POST" id="callMeForm"  data-toggle="validator" data-focus="false">
+                        @csrf
+
                         <div class="form-group">
-                            <input type="text" class="form-control-input" id="lname" name="lname" required>
+                            <input type="text" class="form-control-input"  name="name" required>
                             <label class="label-control" for="lname">Name</label>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control-input" id="lphone" name="lphone" required>
+                            <input type="text" class="form-control-input"  name="phone" required>
                             <label class="label-control" for="lphone">Phone</label>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control-input" id="lemail" name="lemail" required>
+                            <input type="email" class="form-control-input"  name="email" required>
                             <label class="label-control" for="lemail">Email</label>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
-                            <select class="form-control-select" id="lselect" required>
+                            <select class="form-control-select" id="select" name="interest" required>
                                 <option class="select-option" value="" disabled selected>Interested in...</option>
                                 <option class="select-option" value="Off The Ground">Off The Ground</option>
-                                <option class="select-option" value="Accelerated Growth">Accelerated Growth</option>
-                                <option class="select-option" value="Market Domination">Market Domination</option>
+                                <option class="select-option" value="Accelerated Growth">Accelerated Service</option>
+                                <option class="select-option" value="Market Domination">Contract Service</option>
                             </select>
                             <div class="help-block with-errors"></div>
                         </div>
-                        <div class="form-group checkbox white">
-                            <input type="checkbox" id="lterms" value="Agreed-to-Terms" name="lterms" required>I agree with Aria's stated <a class="white" href="privacy-policy.html">Privacy Policy</a> and <a class="white" href="terms-conditions.html">Terms & Conditions</a>
-                            <div class="help-block with-errors"></div>
-                        </div>
+                      
                         <div class="form-group">
                             <button type="submit" class="form-control-submit-button">CALL ME</button>
                         </div>
                         <div class="form-message">
                             <div id="lmsgSubmit" class="h3 text-center hidden"></div>
                         </div>
-                    </form>
+                    </form> --}}
+
+
+                    @if ($message = Session::get('success'))
+                    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                    
+                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                 <span aria-hidden="true">&times;</span>
+                             </button>
+     
+                         <strong>{{$message}}</strong>
+                    </div> 
+                    @endif 
+
+                       <form action="/contactUs" method="Post">
+                         @csrf
+
+
+                        <div class="form-group">
+                            <input type="text" class="form-control-input"  name="name" required>
+                            <label class="label-control" for="lname">Name</label>
+                            <div class="help-block with-errors"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control-input"  name="phone" required>
+                            <label class="label-control" for="lphone">Phone</label>
+                            <div class="help-block with-errors"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" class="form-control-input"  name="email" required>
+                            <label class="label-control" for="lemail">Email</label>
+                            <div class="help-block with-errors"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <select class="form-control-select" id="select" name="interest" required>
+                                <option class="select-option" value="" disabled selected>Interested in...</option>
+                                <option class="select-option" value="Off The Ground">Off The Ground</option>
+                                <option class="select-option" value="Accelerated Growth">Accelerated Service</option>
+                                <option class="select-option" value="Market Domination">Contract Service</option>
+                            </select>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    
+                        <button type="submit" class="form-control-submit-button">CALL ME</button>
+                       </form>
+
                     <!-- end of call me form -->
                     
                 </div> <!-- end of col -->
