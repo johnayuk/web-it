@@ -72,8 +72,12 @@
             </div>
           </div>
           
-          <div class="col-md-6">
 
+  
+
+          <div class="col-md-6">
+          
+          
           <table class="table table-bordered">
             <thead class="thead-dark">
               <tr>
@@ -81,14 +85,17 @@
                 <th scope="col">LastName</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="myTable">
               @foreach ($users as $item)
               <tr>
               <td>{{$item->first_name}}</td>
               <td>{{$item->last_name}}</td>
+          
+
               </tr>
               @endforeach
             </tbody>
+            {{ $users->links() }}
           </table>
           
         </div>

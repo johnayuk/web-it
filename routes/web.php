@@ -33,6 +33,8 @@ Route::post('contactUs','MessageController@createMessage');
 
 Route::group(['middleware'=>['admin']], function () {
 
+    Route::get('search','SearchController@search_user');
+
     
     Route::post('createUser','UserController@createUser');
 

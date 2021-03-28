@@ -28,12 +28,12 @@ class UserController extends Controller
 
     public function users_tables()
     {
-       $users = User::all();
+            $users = User::simplePaginate(6) ;
 
        return view('user_table')->with('users',$users);
     }
 
-
+   
    
 
     public function createUser(UserRequest $data)
