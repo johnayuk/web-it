@@ -1,7 +1,7 @@
 </html><!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AdminX - The last Admin template you'll ever need</title>
+    <title>Bentech</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="./dist/css/adminx.css" media="screen" />
@@ -127,6 +127,21 @@
               </span>
             </a>
           </li>
+
+
+          <li class="sidebar-nav-item">
+            <a href="{{url('users_tables')}}" class="sidebar-nav-link active">
+                <span class="sidebar-nav-icon">
+                  <i data-feather="home"></i>
+                </span>
+                <span class="sidebar-nav-name">
+                  Dashboard
+                </span>
+                <span class="sidebar-nav-end">
+  
+                </span>
+              </a>
+            </li>
    
       </div><!-- Sidebar End -->
 

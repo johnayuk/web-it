@@ -30,19 +30,16 @@ Route::post('contactUs','MessageController@createMessage');
 
 Route::group(['middleware'=>['auth','admin']], function () {
 
-    Route::get('tables','UserController@tables');
-
     
+    Route::post('createUser','UserController@createUser');
+
+    Route::get('tables','MessageController@tables');
+
+    Route::get('users_tables','UserController@users_tables');
+
     Route::get('admin','UserController@admin');
 
-    });
+    Route::delete('/delete/{id}','MessageController@deleteMessage');
 
-   
-    // MAIL_MAILER=smtp
-    // MAIL_HOST=smtp.mailtrap.io
-    // MAIL_PORT=2525
-    // MAIL_USERNAME=44b32a43edfa96
-    // MAIL_PASSWORD=37178dcfa8c0d3
-    // MAIL_ENCRYPTION=tls
-    // MAIL_FROM_ADDRESS=john12ayuk@gmail.com
-    // MAIL_FROM_NAME="${APP_NAME}"
+    });
+  

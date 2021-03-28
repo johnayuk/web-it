@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UserRequest;
 use Illuminate\Http\Request;
 use App\Message;
+use App\User;
 
 class UserController extends Controller
 {
@@ -13,10 +15,35 @@ class UserController extends Controller
     }
 
 
-    public function tables(){
+    public function users_tables()
+    {
+       $users = User::all();
 
-        $messages = Message::all();
-        
-        return view('tables')->with('messages',$messages);
+       return view('user_table')->with('users',$users);
     }
+
+
+   
+
+    public function createUser(UserRequest $data)
+    {
+        $validated = $data->validated();
+
+        
+
+        $users= new User();
+        
+        $users->first_name = request('first_name');
+        $users->last_name = request('last_name');
+        
+
+        
+        if ($users->save()) {
+            // dd($users);
+              return redirect('users_tables');
+        }
+
+    }
+
+    
 }
