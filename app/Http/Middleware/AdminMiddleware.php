@@ -16,13 +16,12 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::check() && Auth::user()->role == 'admin'){
-            // if(Auth::check() && Auth::user()->role == 'admin')
-            return $next($request);
-
+        // if(! auth()->user()->role == 'admin'){
+            if(Auth::check() && Auth::user()->role == 'admin'){ 
+                return $next($request);
         }else{
-
-           return redirect('login')->withErrors('you are not allow to view the AdminPage');
+            return redirect('login');
+          
         }
     }
 }

@@ -34,7 +34,8 @@
 
         <ul class="navbar-nav d-flex justify-content-end mr-2">
           <!-- Notificatoins -->
-          <li class="nav-item dropdown d-flex align-items-center mr-2">
+          <li><a class="dropdown-item" href="{{url('logout')}}">Logout</a></li>
+          {{-- <li class="nav-item dropdown d-flex align-items-center mr-2">
             <a class="nav-link nav-link-notifications" id="dropdownNotifications" data-toggle="dropdown" href="#">
               <i class="oi oi-bell display-inline-block align-middle"></i>
               <span class="nav-link-notification-number">3</span>
@@ -92,7 +93,7 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item text-danger" href="#">Sign out</a>
             </div>
-          </li>
+          </li> --}}
         </ul>
       </nav>
 

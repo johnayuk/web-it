@@ -35,4 +35,12 @@ class AuthController extends Controller
               return redirect('login')->withErrors('Please you have to register');
          }
     }
+
+    public function logout(Request $request)
+    {
+        // Session::flush();
+        $request->session()->flush();
+        Auth::logout();
+        return Redirect('/');
+    }
 }

@@ -20,6 +20,9 @@ Route::get('/', function () {
 
 Route::get('login','AuthController@login')->name('login');
 
+Route::get('logout','AuthController@logout')->name('logout');
+
+
 Route::post('userlogin','AuthController@loginUser');
 
 Route::post('send','EmailController@sendmail');
@@ -28,7 +31,7 @@ Route::post('contactUs','MessageController@createMessage');
 
 
 
-Route::group(['middleware'=>['auth','admin']], function () {
+Route::group(['middleware'=>['admin']], function () {
 
     
     Route::post('createUser','UserController@createUser');

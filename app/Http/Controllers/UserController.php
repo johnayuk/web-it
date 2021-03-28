@@ -6,9 +6,20 @@ use App\Http\Requests\UserRequest;
 use Illuminate\Http\Request;
 use App\Message;
 use App\User;
+use Illuminate\Support\Facades\Auth;
+
 
 class UserController extends Controller
 {
+
+    // public function __construct()
+    // {
+    //     // $this->middleware('auth');
+    //     $this->middleware('admin');
+    // }
+
+
+
     public function admin(){
         
         return view('admin');
