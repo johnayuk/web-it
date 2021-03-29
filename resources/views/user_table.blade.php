@@ -16,8 +16,8 @@
               </ol>
             </nav>
 
-            <div class="pb-3">
-              <h1>Regular Tables</h1>
+            <div class="pb-3 pt-4 m-0">
+             <h2>{{Auth::user()->first_name}}</h2>
             </div>
 
         
@@ -28,7 +28,7 @@
               <div class="col-md-6">
             <div class="card mb-grid">
               <div class="card-header d-flex justify-content-between align-items-center">
-                <div class="card-header-title">Basic Form Example</div>
+                <div class="card-header-title">Create Users</div>
 
                 <nav class="card-header-actions">
                   <a class="card-header-action" data-toggle="collapse" href="#card1" aria-expanded="false" aria-controls="card1">
@@ -72,11 +72,11 @@
             </div>
           </div>
           
-
-  
-
           <div class="col-md-6">
-          
+            <form action="{{ url('search') }}" method="GET">
+              <input type="text"id="myInput"   name="search" required/>
+              <button type="submit" class="btn-sm btn-secondary">Search</button>
+          </form>
           
           <table class="table table-bordered">
             <thead class="thead-dark">
@@ -86,7 +86,7 @@
               </tr>
             </thead>
             <tbody id="myTable">
-              @foreach ($users as $item)
+              @foreach ($users->count()-1 as $item)
               <tr>
               <td>{{$item->first_name}}</td>
               <td>{{$item->last_name}}</td>

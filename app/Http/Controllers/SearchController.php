@@ -11,11 +11,10 @@ class SearchController extends Controller
 {
  
     public function search_user(Request $request)
-    {
-        $search = $request->get('search');
-
-        $users = DB::table('users')->where('id', $request->search)->paginate(5);
-
+    { $search = $request->get('search');
+        $users = DB::table('users')->where('first_name', 'like', '%'.$search. '%') ->orWhere('last_name', 'LIKE', "%{$search}%")->simplePaginate();
+        // $users = User::all();
+        // $departments = Department::with(['doctors'])->get();
         return view('user_table',compact('users'));
     }
 

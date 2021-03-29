@@ -16,9 +16,9 @@
               </ol>
             </nav>
 
-            <div class="pb-3">
-              <h1>Regular Tables</h1>
-            </div>
+            <div class="pb-3 pt-4 m-0">
+              <h2>{{Auth::user()->first_name}}</h2>
+             </div>
 
             @if ($message = Session::get('success'))
               <div class="alert alert-primary alert-dismissible fade show" role="alert">

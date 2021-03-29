@@ -13,9 +13,9 @@
               </ol>
             </nav>
 
-            <div class="pb-3">
-              <h1>Dashboard</h1>
-            </div>
+            <div class="pb-3 pt-4 m-0">
+              <h2>{{Auth::user()->first_name}}</h2>
+             </div>
 
             <div class="row">
               <div class="col-md-6 col-lg-3 d-flex">
