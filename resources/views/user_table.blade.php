@@ -86,7 +86,7 @@
               </tr>
             </thead>
             <tbody id="myTable">
-              @foreach ($users->count()-1 as $item)
+              @foreach ($users as $item)
               <tr>
               <td>{{$item->first_name}}</td>
               <td>{{$item->last_name}}</td>
